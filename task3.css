@@ -1,0 +1,64 @@
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://imgs.search.brave.com/uX0ABe79j0ktHKjo2jY74txEYiXPe2_wlb0lmCCn9As/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/ODAxOTM3NjkyMTAt/YjhkMWMwNDlhN2Q5/P2l4bGliPXJiLTQu/MC4zJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVRo/OGZIZGxZWFJvWlhK/OFpXNThNSHg4TUh4/OGZEQT0mdz0xMDAw/JnE9ODA.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .converter {
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    border: solid 3px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #F5F5F5;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin-bottom: 50px;  
+  }
+  input {
+    width: 220px;
+    font-size: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  select {
+    font-size: 30px;
+    background-color: dimgrey;
+    border-radius: 5px;
+    color: white;
+  }
+  button {
+    display: block;
+    padding: 7px 15px;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 30px auto;  
+    box-sizing: border-box;
+  }
+  button:hover{
+    background-color: white;
+    color: rgb(31, 30, 30);
+    border: solid black 2px;
+    box-sizing: border-box;
+  }
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    background-color: beige;
+  }

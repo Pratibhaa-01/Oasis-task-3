@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature</title>
+  <link rel="stylesheet" href="task3.css">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+<div class="converter">
+  <div id="top"><h1>Temperature Converter</h1></div>
+  <div id="box">
+  <input id="temperature" type="number" placeholder="Enter temperature">
+  <select id="fromUnit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+  <button onclick="convertTemperature()">Convert</button>
+  <p id="result"></p>
+</div></div>
+
+<script>
+function convertTemperature() {
+  const temperatureInput = document.getElementById('temperature').value;
+  const fromUnit = document.getElementById('fromUnit').value;
+  const resultElement = document.getElementById('result');
+  let convertedTemperature;
+
+  switch (fromUnit) {
+    case 'celsius':
+      convertedTemperature = {
+        celsius: parseFloat(temperatureInput),
+        fahrenheit: (parseFloat(temperatureInput) * 9/5) + 32,
+        kelvin: parseFloat(temperatureInput) + 273.15
+      };
+      break;
+    case 'fahrenheit':
+      convertedTemperature = {
+        celsius: (parseFloat(temperatureInput) - 32) * 5/9,
+        fahrenheit: parseFloat(temperatureInput),
+        kelvin: (parseFloat(temperatureInput) - 32) * 5/9 + 273.15
+      };
+      break;
+    case 'kelvin':
+      convertedTemperature = {
+        celsius: parseFloat(temperatureInput) - 273.15,
+        fahrenheit: (parseFloat(temperatureInput) - 273.15) * 9/5 + 32,
+        kelvin: parseFloat(temperatureInput)
+      };
+      break;
+  }
+
+  resultElement.textContent = `
+    Celsius: ${convertedTemperature.celsius.toFixed(2)}°C 
+    Fahrenheit: ${convertedTemperature.fahrenheit.toFixed(2)}°F
+    Kelvin: ${convertedTemperature.kelvin.toFixed(2)}K
+  `;
+}
+</script>
+</body>
+</html>
